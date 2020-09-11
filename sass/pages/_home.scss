@@ -1,0 +1,132 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 175px;
+  width: 800px;
+}
+
+.fylo {
+  background-color: $dark-blue;
+  margin-right: 20px;
+  border-radius: 10px 90px 10px 10px;
+  height: 100%;
+  width: 38%;
+  padding: 40px;
+
+  &__logo {
+    width: 50px; 
+    height: 100%;
+  }
+} 
+
+.storage {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__space {
+    position: absolute;
+    align-self: flex-end;
+    background-color: white;
+    z-index: 2;
+    border-radius: 10px 10px 0 10px;
+    padding: 1rem;
+    margin-right: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__space::after {
+    position: absolute;
+    z-index: 2;
+    width: 20px; 
+    height: 30px; 
+    background-color: white;
+    content: "";
+    transform: translate(56px, 40px);
+    border-radius: 3px;
+    // border-left: 0px solid red;
+    // border-right: 15px solid red;
+    // border-top: 0px solid red;
+    // border-bottom: 30px solid red;
+
+    // margin-right: 35px;
+  }
+
+  &__space-number {
+    font-size: 3.5rem;
+    color: $dark-blue;
+    font-weight: 700;
+    margin-right: 1rem;
+  }
+
+  &__space-text {
+    font-size: 1.2rem;
+    color: $gray-blue;
+    font-weight: 700;
+  }
+
+  &__box {
+    background-color: $dark-blue;
+    padding: 35px;
+    border-radius: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+
+  &__used {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+  }
+
+  &__bar {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__bar-background {
+    width: 100%;
+    background-color: $darkest-blue;
+    height: 18px;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+  }
+
+  &__bar-filled {
+    width: 75%;
+    background: linear-gradient(90deg, $gradient1 0%, $gradient2 100%);
+    height: 14px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 2px;
+  }
+
+  &__bar-dot {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+  }
+
+  &__bar-labels {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__bar-label {
+    font-weight: 700;
+  }
+
+}
