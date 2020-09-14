@@ -1,5 +1,10 @@
 # Frontend Mentor - Fylo data storage component
 
+Coded by Triona Moynihan
+* HTML
+* CSS
+* SASS
+
 ![Design preview for the Fylo data storage component coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
