@@ -5,6 +5,7 @@ Coded by Triona Moynihan
 * CSS
 * SASS
 
+
 ![Design preview for the Fylo data storage component coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
