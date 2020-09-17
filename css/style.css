@@ -11,6 +11,10 @@ html {
 body {
   box-sizing: border-box;
   background-color: #0c122c;
+  background-image: url(/images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 100% 50%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
