@@ -38,14 +38,31 @@ body {
 
 .fylo {
   background-color: #1d2c67;
-  margin-right: 20px;
-  border-radius: 10px 90px 10px 10px;
+  margin-right: 30px;
+  border-radius: 8px 90px 8px 8px;
   height: 100%;
   width: 38%;
-  padding: 40px; }
+  padding: 35px; }
   .fylo__logo {
-    width: 50px;
-    height: 100%; }
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px; }
+  .fylo__icons {
+    display: flex; }
+
+.icons {
+  height: 45px;
+  width: 45px;
+  background-color: #0c122c;
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center; }
+
+.icon {
+  align-self: center; }
 
 .storage {
   width: 60%;
@@ -59,27 +76,31 @@ body {
     background-color: white;
     z-index: 2;
     border-radius: 10px 10px 0 10px;
-    padding: 1rem;
+    padding: 1rem 2rem 1rem 2rem;
     margin-right: 35px;
     display: flex;
     align-items: center;
     justify-content: center; }
-  .storage__space::after {
-    position: absolute;
-    z-index: 2;
-    width: 20px;
-    height: 30px;
-    background-color: white;
+  .storage__space::before {
     content: "";
-    transform: translate(56px, 40px);
-    border-radius: 3px; }
+    position: absolute;
+    bottom: -20px;
+    right: 0px;
+    width: 0px;
+    height: 0px;
+    border-width: 0 20px 20px 0;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+    z-index: 2; }
   .storage__space-number {
     font-size: 3.5rem;
     color: #1d2c67;
     font-weight: 700;
     margin-right: 1rem; }
   .storage__space-text {
-    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
     color: #848794;
     font-weight: 700; }
   .storage__box {
@@ -133,4 +154,4 @@ body {
   bottom: 20px; }
 
 .attribution a {
-  color: #3e52a3; }
+  color: #dddbff; }
