@@ -25,4 +25,11 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @include respond(phone) {
+        background-image: url(/images/bg-mobile.svg);
+        background-size: 100% 100%;
+        background-position: center;
+
+      }
 }

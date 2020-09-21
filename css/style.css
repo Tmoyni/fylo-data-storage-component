@@ -1,3 +1,20 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
 *,
 *::after,
 *::before {
@@ -20,6 +37,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center; }
+  @media only screen and (max-width: 37.5em) {
+    body {
+      background-image: url(/images/bg-mobile.svg);
+      background-size: 100% 100%;
+      background-position: center; } }
 
 body {
   font-family: 'Raleway', sans-serif;
@@ -33,8 +55,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 175px;
-  width: 800px; }
+  height: 17.5rem;
+  width: 80rem; }
+  @media only screen and (max-width: 56.25em) {
+    .main {
+      width: 100%;
+      padding: 2rem;
+      height: 22rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .main {
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      padding: 2rem; } }
 
 .fylo {
   background-color: #1d2c67;
@@ -43,6 +76,12 @@ body {
   height: 100%;
   width: 38%;
   padding: 35px; }
+  @media only screen and (max-width: 37.5em) {
+    .fylo {
+      width: 100%;
+      min-height: 100px;
+      margin-right: 0px;
+      margin-bottom: 60px; } }
   .fylo__logo {
     width: 100%;
     height: 40px;
@@ -70,6 +109,10 @@ body {
   display: flex;
   flex-direction: column;
   position: relative; }
+  @media only screen and (max-width: 37.5em) {
+    .storage {
+      width: 100%;
+      min-height: 100px; } }
   .storage__space {
     position: absolute;
     align-self: flex-end;
@@ -81,6 +124,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center; }
+    @media only screen and (max-width: 37.5em) {
+      .storage__space {
+        position: relative;
+        align-self: center;
+        bottom: 0px;
+        border-radius: 10px;
+        margin-right: 0px;
+        transform: translateY(70px); } }
   .storage__space::before {
     content: "";
     position: absolute;
@@ -92,6 +143,9 @@ body {
     border-style: solid;
     border-color: transparent white transparent transparent;
     z-index: 2; }
+    @media only screen and (max-width: 37.5em) {
+      .storage__space::before {
+        border-style: none; } }
   .storage__space-number {
     font-size: 3.5rem;
     color: #1d2c67;
