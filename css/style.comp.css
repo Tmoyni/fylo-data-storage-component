@@ -1,0 +1,211 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  background-color: #0c122c;
+  background-image: url(/images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 100% 50%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  @media only screen and (max-width: 37.5em) {
+    body {
+      background-image: url(/images/bg-mobile.svg);
+      background-size: 100% 100%;
+      background-position: center; } }
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  color: white; }
+
+.bold-txt {
+  font-weight: 700; }
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 17.5rem;
+  width: 80rem; }
+  @media only screen and (max-width: 56.25em) {
+    .main {
+      width: 100%;
+      padding: 2rem;
+      height: 22rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .main {
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      padding: 2rem; } }
+
+.fylo {
+  background-color: #1d2c67;
+  margin-right: 30px;
+  border-radius: 8px 90px 8px 8px;
+  height: 100%;
+  width: 38%;
+  padding: 35px; }
+  @media only screen and (max-width: 37.5em) {
+    .fylo {
+      width: 100%;
+      min-height: 100px;
+      margin-right: 0px;
+      margin-bottom: 60px; } }
+  .fylo__logo {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px; }
+  .fylo__icons {
+    display: flex; }
+
+.icons {
+  height: 45px;
+  width: 45px;
+  background-color: #0c122c;
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center; }
+
+.icon {
+  align-self: center; }
+
+.storage {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative; }
+  @media only screen and (max-width: 37.5em) {
+    .storage {
+      width: 100%;
+      min-height: 100px; } }
+  .storage__space {
+    position: absolute;
+    align-self: flex-end;
+    background-color: white;
+    z-index: 2;
+    border-radius: 10px 10px 0 10px;
+    padding: 1rem 2rem 1rem 2rem;
+    margin-right: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    @media only screen and (max-width: 37.5em) {
+      .storage__space {
+        position: relative;
+        align-self: center;
+        bottom: 0px;
+        border-radius: 10px;
+        margin-right: 0px;
+        transform: translateY(70px); } }
+  .storage__space::before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: 0px;
+    width: 0px;
+    height: 0px;
+    border-width: 0 20px 20px 0;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+    z-index: 2; }
+    @media only screen and (max-width: 37.5em) {
+      .storage__space::before {
+        border-style: none; } }
+  .storage__space-number {
+    font-size: 3.5rem;
+    color: #1d2c67;
+    font-weight: 700;
+    margin-right: 1rem; }
+  .storage__space-text {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    color: #848794;
+    font-weight: 700; }
+  .storage__box {
+    background-color: #1d2c67;
+    padding: 35px;
+    border-radius: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 0; }
+  .storage__used {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem; }
+  .storage__bar {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; }
+  .storage__bar-background {
+    width: 100%;
+    background-color: #0c122c;
+    height: 18px;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 2px; }
+  .storage__bar-filled {
+    width: 75%;
+    background: linear-gradient(90deg, #ffa399 0%, #ff4d97 100%);
+    height: 14px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 2px; }
+  .storage__bar-dot {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%; }
+  .storage__bar-labels {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; }
+  .storage__bar-label {
+    font-weight: 700; }
+
+.attribution {
+  position: absolute;
+  font-size: 11px;
+  text-align: center;
+  bottom: 20px; }
+
+.attribution a {
+  color: #dddbff; }
