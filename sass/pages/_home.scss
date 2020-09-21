@@ -2,8 +2,21 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 175px;
-  width: 800px;
+  height: 17.5rem;
+  width: 80rem;
+
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 2rem;
+    height: 22rem;
+  }
+
+  @include respond(phone) {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+  }
 }
 
 .fylo {
@@ -13,6 +26,13 @@
   height: 100%;
   width: 38%;
   padding: 35px;
+
+  @include respond(phone) {
+    width: 100%;
+    min-height: 100px;
+    margin-right: 0px;
+    margin-bottom: 60px;
+  }
 
   &__logo {
     width: 100%; 
@@ -48,6 +68,11 @@
   flex-direction: column;
   position: relative;
 
+  @include respond(phone) {
+    width: 100%;
+    min-height: 100px;
+  }
+
   &__space {
     position: absolute;
     align-self: flex-end;
@@ -59,6 +84,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include respond(phone) {
+      position: relative;
+      align-self: center;
+      bottom: 0px;
+      border-radius: 10px;
+      margin-right: 0px;
+      transform: translateY(70px);
+    }
     
   }
 
@@ -75,6 +109,10 @@
     border-color: transparent white transparent transparent;
     
     z-index: 2;
+
+    @include respond(phone) {
+      border-style: none;
+    }
   }
 
   &__space-number {
